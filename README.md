@@ -11,6 +11,8 @@ This board will control the motors, servos, read the wheel encoders and activate
 
 It will communicate with the main CPU through a serial port.
 
+It is designed with a mix of THT and SMD components I had laying around.
+
 ![Microcontroller board](/MicrocontrollerBoard/Screenshot.jpeg)
 
 ## License
