@@ -11,6 +11,8 @@ This board will control the motors, servos, read the wheel encoders and activate
 
 It will communicate with the main CPU through a serial port.
 
+![Microcontroller board](/MicrocontrollerBoard/Screenshot.jpeg)
+
 ## License
 
 MIT Licensed, see LICENSE file.
