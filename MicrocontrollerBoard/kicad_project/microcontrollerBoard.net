@@ -1,6 +1,6 @@
 (export (version D)
   (design
-    (source /media/datos/Proyectos/Rodon2018/MicrocontrollerBoard/puenteH/puenteH.sch)
+    (source microcontrollerBoard.sch)
     (date "jue 01 nov 2018 15:32:17 CET")
     (tool "Eeschema 5.0.1-33cea8e~68~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
@@ -9,7 +9,7 @@
         (company)
         (rev)
         (date)
-        (source puenteH.sch)
+        (source microcontrollerBoard.sch)
         (comment (number 1) (value ""))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
@@ -595,7 +595,7 @@
     (library (logical Regulator_Linear)
       (uri /usr/share/kicad/library/Regulator_Linear.lib))
     (library (logical TC4422)
-      (uri /media/datos/Proyectos/Rodon2018/MicrocontrollerBoard/puenteH/TC4422.lib)))
+      (uri TC4422.lib)))
   (nets
     (net (code 1) (name "Net-(J3-Pad3)")
       (node (ref J3) (pin 3))
