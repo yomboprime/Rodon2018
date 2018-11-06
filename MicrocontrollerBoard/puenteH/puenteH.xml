@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/media/datos/Proyectos/Rodon2018/MicrocontrollerBoard/puenteH/puenteH.sch</source>
+    <source>puenteH.sch</source>
     <date>mar 06 nov 2018 17:19:25 CET</date>
     <tool>Eeschema 5.0.1-33cea8e~68~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
@@ -707,7 +707,7 @@
       <uri>/usr/share/kicad/library/Regulator_Linear.lib</uri>
     </library>
     <library logical="TC4422">
-      <uri>/media/datos/Proyectos/Rodon2018/MicrocontrollerBoard/puenteH/TC4422.lib</uri>
+      <uri>TC4422.lib</uri>
     </library>
   </libraries>
   <nets>
