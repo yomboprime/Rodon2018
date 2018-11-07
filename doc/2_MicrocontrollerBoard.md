@@ -38,7 +38,7 @@ The board used and designed for this project uses an Atmel ATMEGA1284P-PU microc
 - Status (general purpose) LED on PB0
 - Dual Full H-Bridge implemented with four TC4422 (2A per motor)
 
-The Kicad design of this board is in the `MicrocontrollerBoard/kicad_project/` folder.
+The Kicad design of this board is located [here](../MicrocontrollerBoard/kicad_project/).
 
 
 ![MicrocontrollerBoard](../MicrocontrollerBoard/Screenshot.jpeg)
@@ -47,7 +47,7 @@ The Kicad design of this board is in the `MicrocontrollerBoard/kicad_project/` f
 
 ### Voltage dividers
 
-A voltage divider is used to convert a voltage to a lower one and is formed by two resistors, say Ra and Rb. These two resistors are connected in series. Ra is the one connected to the higher voltage, the point between Ra and Rb is connected to the lower voltage output, and the other Rb end is connected to ground. Then, `Vlow = Vhigh * Rb / ( Ra + Rb)`.
+A voltage divider is used to convert a voltage to a lower one and is formed by two resistors, say Ra and Rb. These two resistors are connected in series. Ra is connected in one end to the higher voltage, the point between Ra and Rb is connected to the lower voltage output, and the other Rb end is connected to ground. Then, `Vlow = Vhigh * Rb / ( Ra + Rb)`.
 
 #### UART and SPI voltage dividers
 

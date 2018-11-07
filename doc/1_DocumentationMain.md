@@ -4,13 +4,35 @@ The following sections define the different components of the robot.
 
 ## Electronics
 
-The robot functions have been divided in two boards: A GNU/Linux one (i.e., an SBC) and a microcontroller one. Any Raspberry-like board and an Arduino/ESPxx board will do. The former will be called CPUBoard from now on, and the latter, MicrocontrollerBoard. The CPUBoard code is cross-platform since it is Node.js based, and the Arduino code should be straightforward to run or port to other microcontrollers.
+The robot functions have been divided in two boards:
+
+- A GNU/Linux one (i.e., an SBC)
+- and a microcontroller one.
+
+The former will be called CPUBoard from now on, and the latter, MicrocontrollerBoard.
+
+Any Raspberry-like board and an Arduino/ESPxx board, respectively, will serve for the purpose. The CPUBoard code is cross-platform since it is Node.js based, and the Arduino code should be straightforward to run or port to other microcontrollers.
 
 The CPUBoard will communicate with the MicrocontrollerBoard through a serial port or SPI, still to be decided.
 
-The CPUBoard should have WiFi, and USB 2.0 support (to use a USB webcam, or alternatively, some other camera connector accessible from Video4Linux). It should also have audio mic/output connectors, but it doesn't need video output. SPI, I2C and UART are also needed. In the project, a [custom CPUBoard for a NanoPi-Duo](3_CPUBoard.md) is used.
+### CPUBoard
 
-Besides the MicrocontrollerBoard, you will need a dual Full H-Bridge board suited to control the power of the two motors (in voltage and wattage). Some spare pins will be needed in the MicrocontrollerBoard for the motor PWM control, servos, to read wheel encoders and to control other things. In the project, a [custom MicrocontrollerBoard with integrated dual H-Bridge](2_MicrocontrollerBoard.md) is used.
+This board will process high level functions and serve a web based interface.
+
+The CPUBoard should have WiFi, and USB 2.0 support (to use a USB webcam, or alternatively, some other camera supported in Video4Linux). It should also have audio mic/output connectors, but it doesn't need video output. SPI, I2C and UART are also needed.
+
+See [custom CPUBoard for a NanoPi-Duo](3_CPUBoard.md) for more info about the SBC used in the project and how to adapt your own one.
+
+### MicrocontrollerBoard
+
+The MicrocontrollerBoard controls most of the hardware in real time: it does servos and motors PWM control, read wheel encoders and control other things.
+
+Besides the MicrocontrollerBoard, you will also need a dual Full H-Bridge motor driver board suited to control the power of the two motors (in voltage and wattage).
+
+For this you can use:
+
+- A standalone (or shield) module for the H-Bridge in combination with any generic Arduino/ESPxx/STM for the MicrocontrollerBoard, or
+- A [custom MicrocontrollerBoard with integrated dual H-Bridge](2_MicrocontrollerBoard.md), which is used in the project. Read the previous link for more info on the board and how to use a generic one.
 
 
 ## Robot platform and motors
