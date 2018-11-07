@@ -2,7 +2,7 @@
 
 The following sections define the different components of the robot.
 
-## Robot electronics
+## Electronics
 
 The robot functions have been divided in two boards: A GNU/Linux one (i.e., an SBC) and a microcontroller one. Any Raspberry-like board and an Arduino/ESPxx board will do. The former will be called CPUBoard from now on, and the latter, MicrocontrollerBoard. The CPUBoard code is cross-platform since it is Node.js based, and the Arduino code should be straightforward to run or port to other microcontrollers.
 
