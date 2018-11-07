@@ -21,7 +21,8 @@ The needed pins on the MicrocontrollerBoard are:
 - 1 analog input with two resistors forming a voltage divider, to sense the battery voltage.
 - 2 digital input pins for the wheel encoders.
 - 4 output pins for servos.
-- SPI or UART for communications, to be decided.
+- UART for communications.
+- A way for programming it, either ICSP or another UART via bootloader.
 
 ## Project board
  
@@ -30,8 +31,9 @@ The board used and designed for this project uses an Atmel ATMEGA1284P-PU microc
 - Supply voltage is 5V
 - Separate motor battery voltage from 5V to 20V
 - 16 MHz crystal is used.
-- Voltage conversion resistors for 2xUART, SPI, and A0 (analog input 0, to sense battery voltage)
+- Voltage conversion resistors for 2xUART, and A0 (analog input 0, to sense battery voltage)
 - Can be programmed via bootloader (UART) or ICSP (SPI)
+- A second UART can be used for the communications.
 - 3V3 voltage regulator to power other modules.
 - Exposes 22 pins with neighbour 5V and GND (7 of the pins are analog inputs, 2 have hardware PWM)
 - Power indication LED
@@ -49,9 +51,9 @@ The Kicad design of this board is located [here](../MicrocontrollerBoard/kicad_p
 
 A voltage divider is used to convert a voltage to a lower one and is formed by two resistors, say Ra and Rb. These two resistors are connected in series. Ra is connected in one end to the higher voltage, the point between Ra and Rb is connected to the lower voltage output, and the other Rb end is connected to ground. Then, `Vlow = Vhigh * Rb / ( Ra + Rb)`.
 
-#### UART and SPI voltage dividers
+#### UART voltage dividers
 
-To allow the conversion of 5V to 3V3 on the communication pins that are outputs connected to the [CPUBoard](3_CPUBoard.md), consult the values for each resistor pair:
+To allow the conversion of 5V to 3V3 on the communication pins that are outputs (TX) connected to the [CPUBoard](3_CPUBoard.md), consult the values for each resistor pair:
 
 Output pin|Ra|Rb
 ----------|--|--
@@ -60,6 +62,8 @@ TX2|R7 = 1K|R8 = 2K
 MISO|R10 = 1K|R11 = 2K
 
 Note that only output pins need conversion. Driving a 5V input from a 3V3 output is safe.
+
+Also, TX2 voltage divider may not be needed.
 
 
 #### Battery sense voltage divider

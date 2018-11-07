@@ -14,8 +14,10 @@ Please read the [project documentation](doc/1_DocumentationMain.md)
 ## Project phases history
 
 - ✔️ Design MicrocontrollerBoard: Kicad design for the microcontroller board (Atmega1284P-PU)
-
-- ➡️ Test MicrocontrollerBoard with motors.
+- ➡️ Ordering and waiting for PCB arrival.
+- Test MicrocontrollerBoard with motors.
+- Code basic software & firmware.
+- Keep growing functionality
 
 ## License
 
