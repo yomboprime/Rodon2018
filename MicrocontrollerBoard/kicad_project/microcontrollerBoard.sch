@@ -854,49 +854,45 @@ Connection ~ 7150 5650
 $Comp
 L Device:R R3
 U 1 1 5BCE0BEC
-P 7150 1750
-F 0 "R3" H 7220 1796 50  0000 L CNN
-F 1 "RA" H 7220 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7080 1750 50  0001 C CNN
-F 3 "~" H 7150 1750 50  0001 C CNN
-	1    7150 1750
+P 7000 2000
+F 0 "R3" H 7070 2046 50  0000 L CNN
+F 1 "RA" H 7070 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 2000 50  0001 C CNN
+F 3 "~" H 7000 2000 50  0001 C CNN
+	1    7000 2000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5BCE0BF2
-P 7150 2050
-F 0 "R4" H 7220 2096 50  0000 L CNN
-F 1 "RB" H 7220 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7080 2050 50  0001 C CNN
-F 3 "~" H 7150 2050 50  0001 C CNN
-	1    7150 2050
+P 7000 2300
+F 0 "R4" H 7070 2346 50  0000 L CNN
+F 1 "RB" H 7070 2255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 2300 50  0001 C CNN
+F 3 "~" H 7000 2300 50  0001 C CNN
+	1    7000 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR015
 U 1 1 5BCE0BF8
-P 7150 2200
-F 0 "#PWR015" H 7150 1950 50  0001 C CNN
-F 1 "GND" H 7155 2027 50  0000 C CNN
-F 2 "" H 7150 2200 50  0001 C CNN
-F 3 "" H 7150 2200 50  0001 C CNN
-	1    7150 2200
+P 7000 2450
+F 0 "#PWR015" H 7000 2200 50  0001 C CNN
+F 1 "GND" H 7005 2277 50  0000 C CNN
+F 2 "" H 7000 2450 50  0001 C CNN
+F 3 "" H 7000 2450 50  0001 C CNN
+	1    7000 2450
 	1    0    0    -1  
 $EndComp
-Text GLabel 7450 1600 2    50   Input ~ 0
-V_EXT
 Wire Wire Line
-	7150 1600 7450 1600
+	7000 1850 7300 1850
 Wire Wire Line
-	7150 1900 6850 1900
-Connection ~ 7150 1900
-Text GLabel 6850 1900 0    50   Input ~ 0
+	7000 2150 6700 2150
+Connection ~ 7000 2150
+Text GLabel 6700 2150 0    50   Input ~ 0
 V_IN
-Text GLabel 3900 1800 2    50   Input ~ 0
-V_IN
-Text Notes 6600 2500 0    50   ~ 0
-V_IN = V_EXT * RB / ( RA + RB)
+Text Notes 6450 3000 0    50   ~ 0
+  V_IN = V_BAT * R4 / ( R3 + R4)\n\nKeep V_IN < 5V with a safe margin!
 $Comp
 L Connector_Generic:Conn_01x04 J9
 U 1 1 5BCEC58E
@@ -948,14 +944,14 @@ F 3 "" H 5700 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x08 J3
+L Connector_Generic:Conn_01x07 J3
 U 1 1 5BD3F1C1
-P 4800 2100
-F 0 "J3" H 4750 2600 50  0000 L CNN
-F 1 "PA" H 4750 2500 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4800 2100 50  0001 C CNN
-F 3 "~" H 4800 2100 50  0001 C CNN
-	1    4800 2100
+P 4800 2200
+F 0 "J3" H 4750 2700 50  0000 L CNN
+F 1 "PA" H 4750 2600 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 4800 2200 50  0001 C CNN
+F 3 "~" H 4800 2200 50  0001 C CNN
+	1    4800 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -972,77 +968,29 @@ Wire Wire Line
 	3900 2000 4600 2000
 Wire Wire Line
 	4600 1900 3900 1900
-Text GLabel 4600 1800 0    50   Input ~ 0
-V_EXT
 $Comp
-L Connector_Generic:Conn_01x08 J8
+L Connector_Generic:Conn_01x07 J8
 U 1 1 5BD6F2E7
-P 5350 2100
-F 0 "J8" H 5300 2600 50  0000 L CNN
-F 1 "PA_5V" H 5300 2500 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 5350 2100 50  0001 C CNN
-F 3 "~" H 5350 2100 50  0001 C CNN
-	1    5350 2100
+P 5350 2200
+F 0 "J8" H 5300 2700 50  0000 L CNN
+F 1 "PA_5V" H 5300 2600 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 5350 2200 50  0001 C CNN
+F 3 "~" H 5350 2200 50  0001 C CNN
+	1    5350 2200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x08 J13
+L Connector_Generic:Conn_01x07 J13
 U 1 1 5BD6F3CA
-P 5900 2100
-F 0 "J13" H 5850 2600 50  0000 L CNN
-F 1 "PA_GND" H 5850 2500 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 5900 2100 50  0001 C CNN
-F 3 "~" H 5900 2100 50  0001 C CNN
-	1    5900 2100
+P 5900 2200
+F 0 "J13" H 5850 2700 50  0000 L CNN
+F 1 "PA_GND" H 5850 2600 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 5900 2200 50  0001 C CNN
+F 3 "~" H 5900 2200 50  0001 C CNN
+	1    5900 2200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5150 2800 5150 2500
-Wire Wire Line
-	5150 2500 5150 2400
-Connection ~ 5150 2500
-Wire Wire Line
-	5150 2400 5150 2300
-Connection ~ 5150 2400
-Wire Wire Line
-	5150 2300 5150 2200
-Connection ~ 5150 2300
-Wire Wire Line
-	5150 2200 5150 2100
-Connection ~ 5150 2200
-Wire Wire Line
-	5150 2100 5150 2000
-Connection ~ 5150 2100
-Wire Wire Line
-	5150 2000 5150 1900
-Connection ~ 5150 2000
-Wire Wire Line
-	5150 1900 5150 1800
-Connection ~ 5150 1900
-Wire Wire Line
-	5700 2800 5700 2500
 Connection ~ 5700 2800
-Wire Wire Line
-	5700 2500 5700 2400
-Connection ~ 5700 2500
-Wire Wire Line
-	5700 2400 5700 2300
-Connection ~ 5700 2400
-Wire Wire Line
-	5700 2300 5700 2200
-Connection ~ 5700 2300
-Wire Wire Line
-	5700 2200 5700 2100
-Connection ~ 5700 2200
-Wire Wire Line
-	5700 2100 5700 2000
-Connection ~ 5700 2100
-Wire Wire Line
-	5700 2000 5700 1900
-Connection ~ 5700 2000
-Wire Wire Line
-	5700 1900 5700 1800
-Connection ~ 5700 1900
 $Comp
 L Connector_Generic:Conn_01x04 J18
 U 1 1 5BDDB61D
@@ -1150,9 +1098,6 @@ F 3 "" H 5150 1650 50  0001 C CNN
 	1    5150 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5150 1650 5150 1800
-Connection ~ 5150 1800
 $Comp
 L Connector_Generic:Conn_01x08 J15
 U 1 1 5BF1DC74
@@ -1571,7 +1516,7 @@ L Device:R R10
 U 1 1 5BE4ABDC
 P 1850 3450
 F 0 "R10" H 1780 3404 50  0000 R CNN
-F 1 "R" H 1780 3495 50  0000 R CNN
+F 1 "1K" H 1780 3495 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1780 3450 50  0001 C CNN
 F 3 "~" H 1850 3450 50  0001 C CNN
 	1    1850 3450
@@ -1582,7 +1527,7 @@ L Device:R R11
 U 1 1 5BE4AE93
 P 1850 3750
 F 0 "R11" H 1780 3704 50  0000 R CNN
-F 1 "R" H 1780 3795 50  0000 R CNN
+F 1 "2K" H 1780 3795 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1780 3750 50  0001 C CNN
 F 3 "~" H 1850 3750 50  0001 C CNN
 	1    1850 3750
@@ -1602,4 +1547,60 @@ Wire Wire Line
 	1350 4050 1600 4050
 Wire Wire Line
 	1600 4050 1600 3900
+Connection ~ 5150 1900
+Connection ~ 5150 2000
+Connection ~ 5150 2100
+Connection ~ 5150 2200
+Connection ~ 5150 2300
+Connection ~ 5150 2400
+Connection ~ 5150 2500
+Wire Wire Line
+	5150 2500 5150 2800
+Wire Wire Line
+	5150 2400 5150 2500
+Wire Wire Line
+	5150 1650 5150 1900
+Wire Wire Line
+	5150 2300 5150 2400
+Wire Wire Line
+	5150 2200 5150 2300
+Wire Wire Line
+	5150 2100 5150 2200
+Wire Wire Line
+	5150 2000 5150 2100
+Wire Wire Line
+	5150 1900 5150 2000
+Wire Wire Line
+	5700 1900 5700 2000
+Wire Wire Line
+	5700 2000 5700 2100
+Connection ~ 5700 2000
+Wire Wire Line
+	5700 2100 5700 2200
+Connection ~ 5700 2100
+Wire Wire Line
+	5700 2200 5700 2300
+Connection ~ 5700 2200
+Wire Wire Line
+	5700 2300 5700 2400
+Connection ~ 5700 2300
+Wire Wire Line
+	5700 2400 5700 2500
+Connection ~ 5700 2400
+Wire Wire Line
+	5700 2500 5700 2800
+Connection ~ 5700 2500
+$Comp
+L power:+BATT #PWR0101
+U 1 1 5BEFB538
+P 7300 1850
+F 0 "#PWR0101" H 7300 1700 50  0001 C CNN
+F 1 "+BATT" H 7315 2023 50  0000 C CNN
+F 2 "" H 7300 1850 50  0001 C CNN
+F 3 "" H 7300 1850 50  0001 C CNN
+	1    7300 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 1800 2    50   Input ~ 0
+V_IN
 $EndSCHEMATC
