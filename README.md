@@ -3,18 +3,22 @@ Open source wheeled robot.
 
 This project will hold schematics, designs and code for a complete robot.
 
-## Elements already added:
+The main goal of the project is to create software for a wheeled robot suited for a diversity of common controller boards and hardware, i.e. Raspberry-like And Arduino/ESPxx boards.
 
-### Kicad design for the microcontroller board (Atmega1284P-PU)
+The libre tools used are: Kicad for the electronics, Freecad and Blender for the 3D designs, Inkscape for 2D artwork, and your favourite manner of editing code.
 
-This board will control the motors, servos, read the wheel encoders and activate other low bandwidth stuff.
+## Documentation
 
-It will communicate with the main CPU through a serial port.
+Please read the [project documentation](doc/1_DocumentationMain.md)
 
-It is designed with a mix of THT and SMD components I had laying around.
+## Project phases history
 
-![Microcontroller board](/MicrocontrollerBoard/Screenshot.jpeg)
+- ✅✅✔️ Design MicrocontrollerBoard: Kicad design for the microcontroller board (Atmega1284P-PU)
+
+- ➡️ Test MicrocontrollerBoard with motors.
 
 ## License
 
 MIT Licensed, see LICENSE file.
+
+![MicrocontrollerBoard](./MicrocontrollerBoard/Screenshot.jpeg)
