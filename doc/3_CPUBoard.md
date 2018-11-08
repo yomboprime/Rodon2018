@@ -22,10 +22,12 @@ The CPUBoard must have a compatible GNU/Linux system.
 
 ### Prerequisites instalation
 
+W.I.P
+
 - Node.js is required. Read [Node.js docs](https://nodejs.org/) on how to install for your OS.
 - Clone [Rodon2018 repository](https://github.com/yomboprime/Rodon2018.git) into the CPUBoard file system (`Rodon2018/` from now on)
 - Install library dependecies by issuing these commands:
-  - `cd Rodon2018/CPUBoard/CPUBrain/`
+  - `cd Rodon2018/CPUBrain/`
   - `npm install`
 
 ### WiFi configuration
@@ -66,7 +68,7 @@ The robot server software which runs in CPUBoard is called CPUBrain and it is wr
 
 To simply do a run test of the software, do just:
 
-- `cd Rodon2018/CPUBoard/CPUBrain/`
+- `cd Rodon2018/CPUBrain/`
 - `npm start`
 
 Press (ctrl-c) to exit at any time.
@@ -75,7 +77,7 @@ Press (ctrl-c) to exit at any time.
 
 To execute CPUBrain at system startup automatically, usually adding these lines at the end of the `/etc.rc.local` file will suffice:
 
-- `cd /absolute_path_to_Rodon2018/CPUBoard/CPUBrain/`
+- `cd /absolute_path_to_Rodon2018/CPUBrain/`
 - `npm start || exit 1`
 - `exit 0`
 
