@@ -6,12 +6,10 @@ The following sections define the different components of the robot.
 
 The robot functions have been divided in two boards:
 
-- A GNU/Linux one (i.e., an SBC)
-- and a microcontroller one.
+- CPUBoard: A GNU/Linux board (i.e., an SBC) You can use any Raspberry-like board for this.
+- MicrocontrollerBoard: a microcontroller one. Any Arduino/ESPxx/STM board will be fine.
 
-The former will be called CPUBoard from now on, and the latter, MicrocontrollerBoard.
-
-Any Raspberry-like board and an Arduino/ESPxx board, respectively, will serve for the purpose. The CPUBoard code is cross-platform since it is Node.js based, and the Arduino code should be straightforward to run or port to other microcontrollers.
+The CPUBoard code is cross-platform since it is Node.js based, and the Arduino code should be straightforward to run or port to other microcontrollers.
 
 The CPUBoard will communicate with the MicrocontrollerBoard through a serial port.
 

@@ -54,7 +54,7 @@ The features of the mother board are:
 - Composite video output exposed in pin headers (not used in this project)
 - 2 x UART, I2C exposed in pin headers
 
-(W.I.P) The Kicad design of this board is located `[here](../CPUBoard/kicad_project/).`
+The Kicad design of this board is located [here](https://github.com/yomboprime/CPUBoard).
 
 ## The software: CPUBrain
 
